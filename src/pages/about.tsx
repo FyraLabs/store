@@ -1,23 +1,14 @@
 function TermsPage() {
   return (
     <div className="max-w-xl mx-auto prose prose-blue">
-      <h2>Welcome</h2>
+      <h2>Welcome to FyraShop</h2>
+
       <p>
-        You&apos;re viewing the{" "}
-        <a
-          href="https://headlessdropshipping.com/"
-          title="Learn more about Headless Dropshipping"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Headless Dropshipping Starter
-        </a>{" "}
-        by Jamie Barton.
-      </p>
-      <p>
-        Build your own Headless eCommerce storefront with Next.js and Snipcart,
-        and deliver swag powered by Printful. End to end commerce, styled using
-        TailwindCSS and deployed on Vercel.
+        Why stop at repping Fyra online? With our all new professionally
+        designed streetwear, you can take your loyalty anywhere, while not
+        looking like a complete dork.{" "}
+        <del>Also, we need to feed the developers, they get hungry!</del> So,
+        what are you doing, buy some merch already!
       </p>
     </div>
   );

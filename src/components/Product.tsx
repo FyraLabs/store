@@ -5,6 +5,8 @@ import useWishlistDispatch from "../hooks/useWishlistDispatch";
 import useWishlistState from "../hooks/useWishlistState";
 
 import VariantPicker from "./VariantPicker";
+import ImageModal from "./ImageModal";
+import React from "react";
 
 const Product = (product) => {
   const { addItem } = useWishlistDispatch();
@@ -13,6 +15,8 @@ const Product = (product) => {
   const { id, name, variants } = product;
   const [firstVariant] = variants;
   const oneStyle = variants.length === 1;
+
+  const [showModal, setShowModal] = React.useState(false);
 
   const [activeVariantExternalId, setActiveVariantExternalId] = useState(
     firstVariant.external_id
@@ -36,7 +40,7 @@ const Product = (product) => {
   const onWishlist = isSaved(id);
 
   return (
-    <article className="border border-gray-200 rounded bg-white flex flex-col relative">
+    <article className="shadow-lg rounded bg-white flex flex-col relative">
       <button
         aria-label="Add to wishlist"
         className="appearance-none absolute top-0 right-0 mt-3 mr-3 text-gray-300 focus:text-gray-500 hover:text-red-500 transition focus:outline-none"
@@ -65,6 +69,10 @@ const Product = (product) => {
       <div className="flex items-center justify-center flex-1 sm:flex-shrink-0 w-full p-6">
         {activeVariantFile && (
           <Image
+            onClick={() => {
+              setShowModal(true);
+              console.log(showModal);
+            }}
             src={activeVariantFile.preview_url}
             width={250}
             height={250}
@@ -100,6 +108,14 @@ const Product = (product) => {
           Add to Cart
         </button>
       </div>
+      <ImageModal
+        visible={showModal}
+        modalTitle={name}
+        disableCallback={() => {
+          setShowModal(false);
+        }}
+        imageURL={activeVariantFile.preview_url}
+      />
     </article>
   );
 };
