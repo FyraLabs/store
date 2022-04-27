@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
                       />
                     </svg>
                   </div>
-                  <span className="text-lg font-medium">FyraLabs Store</span>
+                  <span className="text-lg font-medium">FyraStore</span>
                 </a>
               </Link>
             </div>
@@ -105,9 +105,7 @@ const Layout = ({ children }) => {
       </main>
       <footer className="max-w-6xl mx-auto px-6">
         <div className="py-6 border-t border-gray-100 text-center flex flex-col md:flex-row items-center justify-between">
-          <p className="text-gray-600 text-sm">
-            IDK man, this is kinda cool ngl lol
-          </p>
+          <p className="text-gray-600 text-sm">&copy; Fyra Labs</p>
           <nav className="flex items-center justify-end space-x-3 md:space-x-6">
             <Link href="/about">
               <a className="text-gray-800 hover:text-blue-600 p-1 transition text-sm">

@@ -1,7 +1,7 @@
 function TermsPage() {
   return (
     <div className="max-w-xl mx-auto prose prose-blue">
-      <h2>Welcome to FyraShop</h2>
+      <h2>Welcome to the FyraStore</h2>
 
       <p>
         Why stop at repping Fyra online? With our all new professionally
