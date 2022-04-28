@@ -40,7 +40,7 @@ const Product = (product) => {
   const onWishlist = isSaved(id);
 
   return (
-    <article className="shadow-lg rounded bg-white flex flex-col relative">
+    <article className="shadow-lg rounded bg-white dark:bg-neutral-900 flex flex-col relative">
       <button
         aria-label="Add to wishlist"
         className="appearance-none absolute top-0 right-0 mt-3 mr-3 text-gray-300 focus:text-gray-500 hover:text-red-500 transition focus:outline-none"
@@ -83,8 +83,12 @@ const Product = (product) => {
       </div>
       <div className="flex-1 p-6 pt-0">
         <div className="text-center">
-          <p className="mb-1 font-semibold text-gray-900">{name}</p>
-          <p className="text-sm text-gray-500">{formattedPrice}</p>
+          <p className="mb-1 font-semibold text-gray-900 dark:text-neutral-100">
+            {name}
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            {formattedPrice}
+          </p>
         </div>
       </div>
       <div className="p-3 flex flex-col sm:flex-row justify-center items-center">
@@ -97,7 +101,7 @@ const Product = (product) => {
           disabled={oneStyle}
         />
         <button
-          className="snipcart-add-item w-full md:w-auto transition flex-shrink-0 py-2 px-4 border border-gray-300 hover:border-transparent shadow-sm text-sm font-medium bg-white text-gray-900 focus:text-white hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:outline-none rounded"
+          className="snipcart-add-item w-full md:w-auto transition flex-shrink-0 py-2 px-4 border border-gray-300 dark:border-neutral-700 hover:border-transparent shadow-sm text-sm font-medium bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100 focus:text-white hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:outline-none rounded"
           data-item-id={activeVariantExternalId}
           data-item-price={activeVariant.retail_price}
           data-item-url={`/api/products/${activeVariantExternalId}`}

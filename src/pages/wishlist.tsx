@@ -14,7 +14,9 @@ const WishlistPage = () => {
       {hasItems ? (
         <ProductGrid products={items} />
       ) : (
-        <p className="text-center text-gray-500">Your list is empty</p>
+        <p className="text-center text-gray-500 dark:text-gray-200">
+          Your list is empty
+        </p>
       )}
     </>
   );
